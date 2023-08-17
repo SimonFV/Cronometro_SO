@@ -1,0 +1,119 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\intelFPGA_lite\Proyectos\tutorial\platform.qsys --block-symbol-file --output-directory=C:\intelFPGA_lite\Proyectos\tutorial\platform --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading tutorial/platform.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding pio_leds_0 [altera_avalon_pio 22.1]
+Progress: Parameterizing module pio_leds_0
+Progress: Adding pio_switch_0 [altera_avalon_pio 22.1]
+Progress: Parameterizing module pio_switch_0
+Progress: Adding ram_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module ram_0
+Progress: Adding rom_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module rom_0
+Progress: Adding timer_0 [altera_avalon_timer 22.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: platform.nios2_gen2_0: No Debugger.  You will not be able to download or debug programs
+Info: platform.pio_switch_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\intelFPGA_lite\Proyectos\tutorial\platform.qsys --synthesis=VERILOG --output-directory=C:\intelFPGA_lite\Proyectos\tutorial\platform\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading tutorial/platform.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 22.1]
+Progress: Parameterizing module clk_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 22.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding pio_leds_0 [altera_avalon_pio 22.1]
+Progress: Parameterizing module pio_leds_0
+Progress: Adding pio_switch_0 [altera_avalon_pio 22.1]
+Progress: Parameterizing module pio_switch_0
+Progress: Adding ram_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module ram_0
+Progress: Adding rom_0 [altera_avalon_onchip_memory2 22.1]
+Progress: Parameterizing module rom_0
+Progress: Adding timer_0 [altera_avalon_timer 22.1]
+Progress: Parameterizing module timer_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: platform.nios2_gen2_0: No Debugger.  You will not be able to download or debug programs
+Info: platform.pio_switch_0: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: platform: Generating platform "platform" for QUARTUS_SYNTH
+Info: Interconnect is inserted between master nios2_gen2_0.instruction_master and slave rom_0.s1 because the master has address signal 12 bit wide, but the slave is 10 bit wide.
+Info: Interconnect is inserted between master nios2_gen2_0.instruction_master and slave rom_0.s1 because the master has read signal 1 bit wide, but the slave is 0 bit wide.
+Info: Interconnect is inserted between master nios2_gen2_0.instruction_master and slave rom_0.s1 because the master has waitrequest signal 1 bit wide, but the slave is 0 bit wide.
+Info: nios2_gen2_0: "platform" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: pio_leds_0: Starting RTL generation for module 'platform_pio_leds_0'
+Info: pio_leds_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_leds_0 --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0002_pio_leds_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0002_pio_leds_0_gen//platform_pio_leds_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_leds_0: Done RTL generation for module 'platform_pio_leds_0'
+Info: pio_leds_0: "platform" instantiated altera_avalon_pio "pio_leds_0"
+Info: pio_switch_0: Starting RTL generation for module 'platform_pio_switch_0'
+Info: pio_switch_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=platform_pio_switch_0 --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0003_pio_switch_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0003_pio_switch_0_gen//platform_pio_switch_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_switch_0: Done RTL generation for module 'platform_pio_switch_0'
+Info: pio_switch_0: "platform" instantiated altera_avalon_pio "pio_switch_0"
+Info: ram_0: Starting RTL generation for module 'platform_ram_0'
+Info: ram_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_ram_0 --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0004_ram_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0004_ram_0_gen//platform_ram_0_component_configuration.pl  --do_build_sim=0  ]
+Info: ram_0: Done RTL generation for module 'platform_ram_0'
+Info: ram_0: "platform" instantiated altera_avalon_onchip_memory2 "ram_0"
+Info: rom_0: Starting RTL generation for module 'platform_rom_0'
+Info: rom_0:   Generation command is [exec C:/intelfpga_lite/22.1std/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/22.1std/quartus/bin64/perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=platform_rom_0 --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0005_rom_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0005_rom_0_gen//platform_rom_0_component_configuration.pl  --do_build_sim=0  ]
+Info: rom_0: Done RTL generation for module 'platform_rom_0'
+Info: rom_0: "platform" instantiated altera_avalon_onchip_memory2 "rom_0"
+Info: timer_0: Starting RTL generation for module 'platform_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=platform_timer_0 --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0006_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/22.1std/quartus --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0006_timer_0_gen//platform_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'platform_timer_0'
+Info: timer_0: "platform" instantiated altera_avalon_timer "timer_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "platform" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_1: "platform" instantiated altera_mm_interconnect "mm_interconnect_1"
+Info: irq_mapper: "platform" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "platform" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'platform_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/22.1std/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/22.1std/quartus/bin64//perl/lib -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/22.1std/quartus/sopc_builder/bin -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/22.1std/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.pl --name=platform_nios2_gen2_0_cpu --dir=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0009_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/22.1std/quartus/bin64/ --verilog --config=C:/Users/sfv02/AppData/Local/Temp/alt9585_5983732625521353241.dir/0009_cpu_gen//platform_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2023.08.16 17:40:29 (*) Starting Nios II generation
+Info: cpu: # 2023.08.16 17:40:29 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2023.08.16 17:40:30 (*)   Creating all objects for CPU
+Info: cpu: # 2023.08.16 17:40:30 (*)   Generating RTL from CPU objects
+Info: cpu: # 2023.08.16 17:40:30 (*)   Creating plain-text RTL
+Info: cpu: # 2023.08.16 17:40:30 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'platform_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: ram_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "ram_0_s1_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: ram_0_s1_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "ram_0_s1_agent"
+Info: ram_0_s1_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "ram_0_s1_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/intelFPGA_lite/Proyectos/tutorial/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: router: "mm_interconnect_1" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_1" instantiated altera_merlin_router "router_001"
+Info: cmd_demux: "mm_interconnect_1" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file C:/intelFPGA_lite/Proyectos/tutorial/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux: "mm_interconnect_1" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/intelFPGA_lite/Proyectos/tutorial/platform/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: platform: Done "platform" with 30 modules, 39 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

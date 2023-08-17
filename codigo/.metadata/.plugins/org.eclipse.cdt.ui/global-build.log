@@ -1,0 +1,13 @@
+18:51:10 **** Build of configuration Nios II for project cronometro ****
+wsl make mem_init_generate 
+Info: Building /mnt/c/intelFPGA_lite/Proyectos/tutorial/software/cronometro_bsp/
+make --no-print-directory -C /mnt/c/intelFPGA_lite/Proyectos/tutorial/software/cronometro_bsp/
+[BSP build complete]
+Post-processing to create mem_init/hdl_sim/platform_ram_0.dat...
+elf2dat --infile=cronometro.elf --outfile=mem_init/hdl_sim/platform_ram_0.dat \
+	--base=0x00010000 --end=0x00013fff --width=32 \
+	--little-endian-mem --create-lanes=0 
+Post-processing to create mem_init/hdl_sim/platform_rom_0.dat...
+elf2dat --infile=cronometro.elf --outfile=mem_init/hdl_sim/platform_rom_0.dat \
+	--base=0x00000000 --end=0x00000fff --width=32 \
+	--little-endian-mem --create-lanes=0 
