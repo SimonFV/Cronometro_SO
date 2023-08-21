@@ -86,7 +86,7 @@ ACDS_VERSION := 22.1
 
 # Qsys--generated SOPCINFO file. Required for resolving node instance ID's with 
 # design component names. 
-SOPCINFO_FILE := c:/intelFPGA_lite/Proyectos/tutorial/platform.sopcinfo
+SOPCINFO_FILE := C:/intelFPGA_lite/Proyectos/tutorial/Cronometro_SO/platform.sopcinfo
 
 # Big-Endian operation. 
 # setting BIG_ENDIAN is false

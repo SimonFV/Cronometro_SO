@@ -2,9 +2,9 @@
  * linker.x - Linker script
  *
  * Machine generated for CPU 'nios2_gen2_0' in SOPC Builder design 'platform'
- * SOPC Builder design path: c:/intelFPGA_lite/Proyectos/tutorial/platform.sopcinfo
+ * SOPC Builder design path: C:/intelFPGA_lite/Proyectos/tutorial/Cronometro_SO/platform.sopcinfo
  *
- * Generated: Wed Aug 16 18:19:56 CST 2023
+ * Generated: Sat Aug 19 20:46:55 CST 2023
  */
 
 /*

@@ -101,7 +101,7 @@ ACDS_VERSION := 22.1
 # BUILD_NUMBER: 922
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := c:/intelFPGA_lite/Proyectos/tutorial/platform.sopcinfo
+SOPC_FILE := C:/intelFPGA_lite/Proyectos/tutorial/Cronometro_SO/platform.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-newSoftwareExampleWizardPage.defaultLocation=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\software\\cronometro
-newSoftwareExampleWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\platform.sopcinfo
-newSoftwareExampleWizardPage2.newBspLocation=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\software\\cronometro_bsp
+newSoftwareExampleWizardPage.defaultLocation=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\Cronometro_SO\\software\\cronometro
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\Cronometro_SO\\platform.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\intelFPGA_lite\\Proyectos\\tutorial\\Cronometro_SO\\software\\cronometro_bsp

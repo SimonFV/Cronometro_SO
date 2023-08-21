@@ -1,6 +1,6 @@
-18:49:09 **** Incremental Build of configuration Nios II for project cronometro_bsp ****
+20:47:41 **** Incremental Build of configuration Nios II for project cronometro_bsp ****
 wsl make all 
 [BSP build complete]
 
-18:49:10 Build Finished (took 1s.245ms)
+20:47:43 Build Finished (took 2s.28ms)
 

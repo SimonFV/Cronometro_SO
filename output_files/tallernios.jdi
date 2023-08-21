@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="65948b57491300b3fc88"/>
+  </project>
+  <file_info>
+    <file device="5CSEMA5F31C6" path="tallernios.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="platform:plat" name="plat">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME platform HAS_SOPCINFO 1 GENERATION_ID 1692499713"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

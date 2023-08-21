@@ -2,12 +2,12 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>16-ago-2023 18:19:55</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1692231595049</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>C:\intelFPGA_lite\Proyectos\tutorial\software\cronometro_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
-        <SopcDesignFile>C:\intelFPGA_lite\Proyectos\tutorial\platform.sopcinfo</SopcDesignFile>
-        <SystemFileHash>c18fb4f91bb790bc4711308c7983aad7ce91fad6248b883fe86baaf427f3d8f1</SystemFileHash>
+        <BspGeneratedTimeStamp>19-ago-2023 20:46:55</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1692499615143</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>C:\intelFPGA_lite\Proyectos\tutorial\Cronometro_SO\software\cronometro_bsp</BspGeneratedLocation>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
+        <SopcDesignFile>C:\intelFPGA_lite\Proyectos\tutorial\Cronometro_SO\platform.sopcinfo</SopcDesignFile>
+        <SystemFileHash>b5354b67b26bc43dc4c2d4e5ab7821519f61c02333ecd83c7b713398d4d2bb24</SystemFileHash>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -894,14 +894,50 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_leds_0</slaveDescriptor>
+                <slaveDescriptor>pio_7segments_0</slaveDescriptor>
                 <addressRange>0x00030000 - 0x0003000F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_switch_0</slaveDescriptor>
+                <slaveDescriptor>pio_7segments_1</slaveDescriptor>
                 <addressRange>0x00040000 - 0x0004000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_7segments_2</slaveDescriptor>
+                <addressRange>0x00050000 - 0x0005000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_7segments_3</slaveDescriptor>
+                <addressRange>0x00060000 - 0x0006000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_7segments_4</slaveDescriptor>
+                <addressRange>0x00070000 - 0x0007000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_7segments_5</slaveDescriptor>
+                <addressRange>0x00080000 - 0x0008000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_switch_0</slaveDescriptor>
+                <addressRange>0x00090000 - 0x0009000F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_button_0</slaveDescriptor>
+                <addressRange>0x000A0000 - 0x000A000F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

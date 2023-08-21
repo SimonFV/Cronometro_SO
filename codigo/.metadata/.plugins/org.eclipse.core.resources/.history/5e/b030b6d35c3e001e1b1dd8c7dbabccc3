@@ -1,0 +1,160 @@
+#include "sys/alt_irq.h"
+
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_timer_regs.h"
+
+#include "system.h"
+
+// static unsigned leds = 0;
+static unsigned int segments7_0 = 0;
+static unsigned int segments7_1 = 0;
+static unsigned int segments7_2 = 0;
+static unsigned int segments7_3 = 0;
+static unsigned int segments7_4 = 0;
+static unsigned int segments7_5 = 0;
+
+static unsigned int milliseconds = 0;
+static unsigned int seconds = 0;
+static unsigned int minutes = 0;
+
+unsigned int deco(unsigned int number)
+{
+	unsigned int segments7 = 127;
+
+	if (number == 0)
+		segments7 = 64;
+	else if (number == 1)
+		segments7 = 121;
+	else if (number == 2)
+		segments7 = 36;
+	else if (number == 3)
+		segments7 = 48;
+	else if (number == 4)
+		segments7 = 25;
+	else if (number == 5)
+		segments7 = 18;
+	else if (number == 6)
+		segments7 = 2;
+	else if (number == 7)
+		segments7 = 120;
+	else if (number == 8)
+		segments7 = 0;
+	else if (number == 9)
+		segments7 = 24;
+	else
+		segments7 = 127;
+
+	return segments7;
+}
+
+
+static void timer_irs(void *context)
+{
+	(void)context;
+
+	milliseconds++;
+	unsigned int mode = IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_0_BASE);
+
+
+	if (mode == 0)
+	{
+		if (milliseconds == 1000000)
+		{
+			milliseconds = 0;
+		}
+		unsigned int segments_temp = deco((milliseconds/1000) % 10);
+		segments7_0 = deco(milliseconds % 10);
+		segments7_1 = deco((milliseconds/10) % 10);
+		segments7_2 = deco((milliseconds/100) % 10);
+		segments7_3 = segments_temp;
+		//segments7_3 = deco((milliseconds/1000) % 10);
+		segments7_4 = deco((milliseconds/10000) % 10);
+		segments7_5 = deco((milliseconds/100000) % 10);
+	}
+	else if (mode == 1)
+	{
+		if (milliseconds == 1000)
+		{
+			seconds++;
+			milliseconds = 0;
+		}
+		if (seconds == 1000000)
+		{
+			seconds = 0;
+		}
+		segments7_0 = deco(seconds % 10);
+		segments7_1 = deco((seconds/10) % 10);
+		segments7_2 = deco((seconds/100) % 10);
+		segments7_3 = deco((seconds/1000) % 10);
+		segments7_4 = deco((seconds/10000) % 10);
+		segments7_5 = deco((seconds/100000) % 10);
+	}
+	else if (mode == 2)
+	{
+		if (milliseconds == 1000)
+		{
+			seconds++;
+			milliseconds = 0;
+		}
+
+		if (seconds == 60)
+		{
+			minutes++;
+			seconds = 0;
+		}
+
+		if (minutes == 60)
+		{
+			minutes = 0;
+		}
+
+		segments7_0 = deco((milliseconds/10) % 10);
+		segments7_1 = deco((milliseconds/100) % 10);
+		segments7_2 = deco(seconds % 10);
+		segments7_3 = deco((seconds/10) % 10);
+		segments7_4 = deco(minutes % 10);
+		segments7_5 = deco((minutes/10) % 10);
+	}
+	else
+	{
+		segments7_0 = milliseconds % 10;
+		segments7_1 = (milliseconds / 10) % 10;
+		segments7_2 = (milliseconds / 100) % 10;
+		segments7_3 = (milliseconds / 1000) % 10;
+		segments7_4 = (milliseconds / 10000) % 10;
+		segments7_5 = (milliseconds / 100000) % 10;
+	}
+
+
+	// leds = leds << 1 | (IORD_ALTERA_AVALON_PIO_DATA(PIO_SWITCH_0_BASE) & 1);
+
+
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_0_BASE, segments7_0);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_1_BASE, segments7_1);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_2_BASE, segments7_2);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_3_BASE, segments7_3);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_4_BASE, segments7_4);
+	IOWR_ALTERA_AVALON_PIO_DATA(PIO_7SEGMENTS_5_BASE, segments7_5);
+
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
+}
+
+int main()
+{
+	alt_ic_isr_register(
+		TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID,
+		TIMER_0_IRQ,
+		timer_irs,
+		NULL,
+		NULL);
+
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(
+		TIMER_0_BASE,
+		ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | ALTERA_AVALON_TIMER_CONTROL_CONT_MSK);
+
+	/* Event loop never exits. */
+	while (1)
+		;
+
+	return 0;
+}

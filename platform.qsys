@@ -6,7 +6,7 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
    element clk_0
@@ -25,11 +25,89 @@
          type = "int";
       }
    }
-   element pio_leds_0
+   element pio_7segments_0
    {
       datum _sortIndex
       {
          value = "5";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_7segments_1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_7segments_2
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_7segments_3
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_7segments_4
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_7segments_5
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+      datum sopceditor_expanded
+      {
+         value = "0";
+         type = "boolean";
+      }
+   }
+   element pio_button_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
          type = "int";
       }
       datum sopceditor_expanded
@@ -104,7 +182,7 @@
  <parameter name="hideFromIPCatalog" value="false" />
  <parameter name="lockedInterfaceDefinition" value="" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="tallernios.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="0" />
  <parameter name="testBenchDutName" value="" />
@@ -113,8 +191,38 @@
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
-   name="pio_leds_0_external_connection"
-   internal="pio_leds_0.external_connection"
+   name="pio_7segments_0_external_connection"
+   internal="pio_7segments_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7segments_1_external_connection"
+   internal="pio_7segments_1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7segments_2_external_connection"
+   internal="pio_7segments_2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7segments_3_external_connection"
+   internal="pio_7segments_3.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7segments_4_external_connection"
+   internal="pio_7segments_4.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7segments_5_external_connection"
+   internal="pio_7segments_5.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_button_0_external_connection"
+   internal="pio_button_0.external_connection"
    type="conduit"
    dir="end" />
  <interface
@@ -150,10 +258,10 @@
   <parameter name="customInstSlavesSystemInfo_nios_a" value="&lt;info/&gt;" />
   <parameter name="customInstSlavesSystemInfo_nios_b" value="&lt;info/&gt;" />
   <parameter name="customInstSlavesSystemInfo_nios_c" value="&lt;info/&gt;" />
-  <parameter name="dataAddrWidth" value="19" />
+  <parameter name="dataAddrWidth" value="20" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x20000' end='0x20020' type='altera_avalon_timer.s1' /><slave name='pio_leds_0.s1' start='0x30000' end='0x30010' type='altera_avalon_pio.s1' /><slave name='pio_switch_0.s1' start='0x40000' end='0x40010' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='ram_0.s1' start='0x10000' end='0x14000' type='altera_avalon_onchip_memory2.s1' /><slave name='timer_0.s1' start='0x20000' end='0x20020' type='altera_avalon_timer.s1' /><slave name='pio_7segments_0.s1' start='0x30000' end='0x30010' type='altera_avalon_pio.s1' /><slave name='pio_7segments_1.s1' start='0x40000' end='0x40010' type='altera_avalon_pio.s1' /><slave name='pio_7segments_2.s1' start='0x50000' end='0x50010' type='altera_avalon_pio.s1' /><slave name='pio_7segments_3.s1' start='0x60000' end='0x60010' type='altera_avalon_pio.s1' /><slave name='pio_7segments_4.s1' start='0x70000' end='0x70010' type='altera_avalon_pio.s1' /><slave name='pio_7segments_5.s1' start='0x80000' end='0x80010' type='altera_avalon_pio.s1' /><slave name='pio_switch_0.s1' start='0x90000' end='0x90010' type='altera_avalon_pio.s1' /><slave name='pio_button_0.s1' start='0xA0000' end='0xA0010' type='altera_avalon_pio.s1' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -199,7 +307,7 @@
   <parameter name="instruction_master_high_performance_paddr_size" value="0" />
   <parameter name="instruction_master_paddr_base" value="0" />
   <parameter name="instruction_master_paddr_size" value="0" />
-  <parameter name="internalIrqMaskSystemInfo" value="1" />
+  <parameter name="internalIrqMaskSystemInfo" value="3" />
   <parameter name="io_regionbase" value="0" />
   <parameter name="io_regionsize" value="0" />
   <parameter name="master_addr_map" value="false" />
@@ -311,7 +419,11 @@
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
  </module>
- <module name="pio_leds_0" kind="altera_avalon_pio" version="22.1" enabled="1">
+ <module
+   name="pio_7segments_0"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
   <parameter name="bitClearingEdgeCapReg" value="false" />
   <parameter name="bitModifyingOutReg" value="false" />
   <parameter name="captureEdge" value="false" />
@@ -323,7 +435,115 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="10" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_7segments_1"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_7segments_2"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_7segments_3"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_7segments_4"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_7segments_5"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="7" />
+ </module>
+ <module
+   name="pio_button_0"
+   kind="altera_avalon_pio"
+   version="22.1"
+   enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="true" />
+  <parameter name="clockRate" value="50000000" />
+  <parameter name="direction" value="Input" />
+  <parameter name="edgeType" value="FALLING" />
+  <parameter name="generateIRQ" value="true" />
+  <parameter name="irqType" value="EDGE" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
  </module>
  <module
    name="pio_switch_0"
@@ -341,7 +561,7 @@
   <parameter name="resetValue" value="0" />
   <parameter name="simDoTestBenchWiring" value="false" />
   <parameter name="simDrivenValue" value="0" />
-  <parameter name="width" value="1" />
+  <parameter name="width" value="2" />
  </module>
  <module
    name="ram_0"
@@ -412,7 +632,7 @@
   <parameter name="counterSize" value="32" />
   <parameter name="fixedPeriod" value="true" />
   <parameter name="period" value="1" />
-  <parameter name="periodUnits" value="SEC" />
+  <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="50000000" />
@@ -441,7 +661,7 @@
    kind="avalon"
    version="22.1"
    start="nios2_gen2_0.data_master"
-   end="pio_leds_0.s1">
+   end="pio_7segments_0.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00030000" />
   <parameter name="defaultConnection" value="false" />
@@ -452,7 +672,61 @@
    start="nios2_gen2_0.data_master"
    end="pio_switch_0.s1">
   <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00090000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_button_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x000a0000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_7segments_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x00040000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_7segments_2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00050000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_7segments_3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00060000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_7segments_4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00070000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="22.1"
+   start="nios2_gen2_0.data_master"
+   end="pio_7segments_5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x00080000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -466,8 +740,38 @@
  </connection>
  <connection kind="clock" version="22.1" start="clk_0.clk" end="nios2_gen2_0.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="timer_0.clk" />
- <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_leds_0.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_0.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_switch_0.clk" />
+ <connection kind="clock" version="22.1" start="clk_0.clk" end="pio_button_0.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_1.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_2.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_3.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_4.clk" />
+ <connection
+   kind="clock"
+   version="22.1"
+   start="clk_0.clk"
+   end="pio_7segments_5.clk" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="rom_0.clk1" />
  <connection kind="clock" version="22.1" start="clk_0.clk" end="ram_0.clk1" />
  <connection
@@ -476,6 +780,13 @@
    start="nios2_gen2_0.irq"
    end="timer_0.irq">
   <parameter name="irqNumber" value="0" />
+ </connection>
+ <connection
+   kind="interrupt"
+   version="22.1"
+   start="nios2_gen2_0.irq"
+   end="pio_button_0.irq">
+  <parameter name="irqNumber" value="1" />
  </connection>
  <connection
    kind="reset"
@@ -491,12 +802,42 @@
    kind="reset"
    version="22.1"
    start="clk_0.clk_reset"
-   end="pio_leds_0.reset" />
+   end="pio_7segments_0.reset" />
  <connection
    kind="reset"
    version="22.1"
    start="clk_0.clk_reset"
    end="pio_switch_0.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_button_0.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_7segments_1.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_7segments_2.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_7segments_3.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_7segments_4.reset" />
+ <connection
+   kind="reset"
+   version="22.1"
+   start="clk_0.clk_reset"
+   end="pio_7segments_5.reset" />
  <connection
    kind="reset"
    version="22.1"
